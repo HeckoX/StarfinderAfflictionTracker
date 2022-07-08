@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Please see the LICENSE.md file included with this distribution for attribution and copyright information. -->
+
+<root version='3.3' release='3'>
+	<properties>
+		<name>Feature: Malady Tracker</name>
+		<version>2.9</version>
+		<author>bmos (Wil Thieme)</author>
+		<description>This FantasyGrounds extension helps track the duration, saves, effects, and other information relating to maladies.</description>
+		<ruleset>
+			<name>3.5E</name>
+		</ruleset>
+		<ruleset>
+			<name>PFRPG</name>
+		</ruleset>
+	</properties>
+
+	<announcement text="https://github.com/bmos/FG-PFRPG-Disease-Tracker\nPFRPG Malady Tracker v2.9:\nThis extension helps track the duration, saves, effects, and other information relating to maladies. To access it, click the pill bottle button next by the character's hitpoints.\nTo have saving throws rolled automatically based on the in-game clock, you must also be using the ClockAdjuster extension." icon="logo_vitamin" font="emotefont" />
+
+	<base>
+		<!-- Graphics -->
+	    <icon name="logo_vitamin" file="graphics/vitamin_logo.png" />
+	    <icon name="button_vitamin" file="graphics/button_vitamin.png" />
+	    <icon name="button_vitamin_down" file="graphics/button_vitamin_down.png" />
+		<!-- Campaign Records -->
+		<includefile source="campaign/record_char_main.xml" />
+		<includefile source="campaign/record_npc.xml" />
+		<includefile source="campaign/record_disease.xml" />
+		<!-- Strings -->
+		<includefile source="strings/strings_disease_tracker.xml" />
+		<!-- Scripts -->
+		<script name="DiseaseTracker" file="scripts/disease_tracker.lua" />
+		<script name="ActionDiseaseSave" file="scripts/manager_action_diseasesave.lua" />
+		<script name="ActionDiseaseTimeRoll" file="scripts/manager_action_diseasetimeroll.lua" />
+	</base>
+</root>
