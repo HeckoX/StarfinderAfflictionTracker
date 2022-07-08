@@ -1,15 +1,11 @@
-# PFRPG Malady Tracker
-This extension handles automatic rolling of saving throws against poisons, diseases, and other types of maladies.
+# SFRPG Malady Tracker
+This extension handles automatic rolling of saving throws against poisons, diseases, curses, and  and other types of afflictions
 
 # Compatibility and Instructions
 This extension has been tested with [FantasyGrounds Unity](https://www.fantasygrounds.com/home/FantasyGroundsUnity.php) 4.1.13 (2022-01-05).
 
-If you're using this with Pathfinder, you should absolutely get the [Maladies Library](https://github.com/bmos/FG-PFRPG-Maladies-Library) module as well. This module contains over 600 pre-entered maladies.
-
-You may also want to use my [Upgrade NPC Actions extension](https://github.com/bmos/FG-PFRPG-Upgrade-NPC-Actions) to have links added to NPC notes tabs so you don't have to search for the right malady in-game or during prep.
-
 # Features
-* Tracks diseases or poisons that are incurred.
+* Tracks diseases, poisons, or curses that are incurred.
 * If poison, show buttons to increaes DC or duration (for subsequent doses/exposure)
 * Manual button to roll against listed save DC and announce success/failure
 * Automatic counting of rolled saves (automatic or manual), taking into account consecutive/nonconsecutive requirements.
@@ -18,4 +14,5 @@ You may also want to use my [Upgrade NPC Actions extension](https://github.com/b
 * Notification message in the chat when a poison or disease that has multiple possible DCs is used (to remind the GM to set the DC).
 
 # Video Demonstration (click for video)
+Video is of the PFRPG Malady Tracker, that this extension is based on
 [<img src="https://i.ytimg.com/vi_webp/VkTjPjuczYo/hqdefault.webp">](https://www.youtube.com/watch?v=VkTjPjuczYo)

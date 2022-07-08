@@ -9,7 +9,7 @@
 	<windowclass name="charsheet_main" merge="join">
 		<sheetdata>
 			<buttoncontrol name="button_diseases">
-				<bounds>30,395,23,23</bounds>
+				<bounds>200,450,23,23</bounds>
 				<icon normal="button_vitamin" pressed="button_vitamin_down" />
 				<tooltip textres="char_diseases_button_tooltip" />
 				<script>
