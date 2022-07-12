@@ -2,10 +2,10 @@
 
 <!-- Please see the LICENSE.md file included with this distribution for attribution and copyright information. -->
 
-<root version='1.0' release='1'>
+<root version='3.3' release='3'>
 	<properties>
 		<name>Feature: Affliction Tracker</name>
-		<version>0.1.0</version>
+		<version>0.1.1</version>
 		<author>Hecko X (Victor MA)</author>
 		<description>This FantasyGrounds extension helps track the duration, saves, effects, and other information relating to afflictions. Based on the PFRPG disease tracker by bmos.</description>
 		<ruleset>

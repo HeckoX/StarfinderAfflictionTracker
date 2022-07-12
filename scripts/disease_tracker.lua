@@ -106,7 +106,7 @@ function parseDiseases()
 										Interface.getString('disease_agencynotifer'),
 										DB.getValue(nodeActor, 'name', 'A character'),
 										nTargetRollCount,
-										'a ' .. DB.getValue(nodeDisease, 'type', 'malady')),
+										'a ' .. DB.getValue(nodeDisease, 'type', 'affliction')),
 									true, rActor)
 							else
 								-- rolls saving throws until the desired total is achieved
