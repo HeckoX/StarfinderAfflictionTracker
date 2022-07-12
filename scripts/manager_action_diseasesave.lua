@@ -175,7 +175,7 @@ function modSave(rSource, rTarget, rRoll)
 		local bFlatfooted = false
 		if not rRoll.bVsSave and ModifierStack.getModifierKey('ATT_FF') then
 			bFlatfooted = true
-		elseif EffectManager35E.hasEffect(rSource, 'Flat-footed') or EffectManager35E.hasEffect(rSource, 'Flatfooted') then
+		elseif EffectManagerSFRPG.hasEffect(rSource, 'Flat-footed') or EffectManagerSFRPG.hasEffect(rSource, 'Flatfooted') then
 			bFlatfooted = true
 		end
 
@@ -185,7 +185,7 @@ function modSave(rSource, rTarget, rRoll)
 			rSaveSource = ActorManager.resolveActor(rRoll.sSource)
 		end
 		local aExistingBonusByType = {}
-		local aSaveEffects = EffectManager35E.getEffectsByType(rSource, 'SAVE', aSaveFilter, rSaveSource, false)
+		local aSaveEffects = EffectManagerSFRPG.getEffectsByType(rSource, 'SAVE', aSaveFilter, rSaveSource, false)
 		for _,v in pairs(aSaveEffects) do
 			-- Determine bonus type if any
 			local sBonusType = nil
@@ -222,32 +222,32 @@ function modSave(rSource, rTarget, rRoll)
 		end
 
 		-- Get condition modifiers
-		if EffectManager35E.hasEffectCondition(rSource, 'Frightened') or 
-				EffectManager35E.hasEffectCondition(rSource, 'Panicked') or
-				EffectManager35E.hasEffectCondition(rSource, 'Shaken') then
+		if EffectManagerSFRPG.hasEffectCondition(rSource, 'Frightened') or 
+				EffectManagerSFRPG.hasEffectCondition(rSource, 'Panicked') or
+				EffectManagerSFRPG.hasEffectCondition(rSource, 'Shaken') then
 			nAddMod = nAddMod - 2
 			bEffects = true
 		end
-		if EffectManager35E.hasEffectCondition(rSource, 'Sickened') then
+		if EffectManagerSFRPG.hasEffectCondition(rSource, 'Sickened') then
 			nAddMod = nAddMod - 2
 			bEffects = true
 		end
 		if sSave == 'reflex' then
-			if EffectManager35E.hasEffectCondition(rSource, 'Slowed') then
+			if EffectManagerSFRPG.hasEffectCondition(rSource, 'Slowed') then
 				nAddMod = nAddMod - 1
 				bEffects = true
 			end
 		end
 
 		-- Get ability modifiers
-		local nBonusStat, nBonusEffects = ActorManager35E.getAbilityEffectsBonus(rSource, sActionStat)
+		local nBonusStat, nBonusEffects = ActorManagerSFRPG.getAbilityEffectsBonus(rSource, sActionStat)
 		if nBonusEffects > 0 then
 			bEffects = true
 			nAddMod = nAddMod + nBonusStat
 		end
 		
 		-- Get negative levels
-		local nNegLevelMod, nNegLevelCount = EffectManager35E.getEffectsBonus(rSource, {'NLVL'}, true)
+		local nNegLevelMod, nNegLevelCount = EffectManagerSFRPG.getEffectsBonus(rSource, {'NLVL'}, true)
 		if nNegLevelCount > 0 then
 			bEffects = true
 			nAddMod = nAddMod - nNegLevelMod
