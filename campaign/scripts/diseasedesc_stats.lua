@@ -66,7 +66,7 @@ function generateSaveString()
 	save_string.setValue(sSave)
 end
 
---	This function sets the visibility and editability of various fields on the malady sheet when it is unlocked.
+--	This function sets the visibility and editability of various fields on the affliction sheet when it is unlocked.
 function ifLocked(sType)
 	local sSubtype = ''
 	if subtype.getValue() and subtype.getValue() ~= '' then
@@ -83,6 +83,15 @@ function ifLocked(sType)
 	
 	associated_npc_name.setVisible(false)
 	associated_npc_name_label.setVisible(false)
+	
+	if track_type.getValue() == 'physical' then
+			stages_physical_disease.setVisible(true)
+			stages_mental_disease.setVisible(false)
+	end
+	if track_type.getValue() == 'mental' then
+			stages_physical_disease.setVisible(false)
+			stages_mental_disease.setVisible(true)
+	end
 	
 	if getDatabaseNode().getParent().getName() ~= 'disease'
 	and getDatabaseNode().getChild('...').getName() ~= 'reference' then
@@ -165,7 +174,7 @@ function ifLocked(sType)
 	end
 end
 
---	This function sets the visibility and editability of various fields on the malady sheet when it is locked.
+--	This function sets the visibility and editability of various fields on the affliction sheet when it is locked.
 function ifUnlocked(sType)
 	save_string.setVisible(false)
 	savetype.setVisible(true)

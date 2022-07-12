@@ -107,6 +107,57 @@
 			</label_column>
 			<string_columnh name="subtype" />
 			
+			<!--NEW-->
+			<label_column name="track_label">
+				<static textres="record_disease_track_label" />
+			</label_column>
+			
+			<label_column_right name="track_progression">
+				<anchored height="20" >
+					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+				</anchored>
+				<hideonvalue value="0" />
+			</label_column_right>
+			
+			<button_stringcycler name="track_type">
+				<anchored width="50">
+					<top parent="subtype" anchor="bottom" offset="7" />
+					<left parent="track_progression" anchor="right" offset="-105" />
+				</anchored>
+				<parameters>
+					<defaultlabelres>record_disease_cycler_track_type_physical</defaultlabelres>
+					<labelsres>record_disease_cycler_track_type_mental</labelsres>
+					<values>physical|mental</values>
+				</parameters>
+			</button_stringcycler>
+			
+			<button_stringcycler name="stages_physical_disease">
+				<anchored width="100">
+					<top parent="subtype" anchor="bottom" offset="7" />
+					<left parent="track_type" anchor="right" offset="10" />
+				</anchored>
+				<parameters>
+					<defaultlabelres>record_disease_cycler_track_latent</defaultlabelres>
+					<labelsres>record_disease_cycler_track_weakened|record_disease_cycler_track_impared|record_disease_cycler_track_debilitated</labelsres>
+					<values>1|2|3|4</values>
+				</parameters>
+			</button_stringcycler>
+			
+			<button_stringcycler name="stages_mental_disease">
+				<anchored width="100">
+					<top parent="subtype" anchor="bottom" offset="7" />
+					<left parent="track_type" anchor="right" offset="10" />
+				</anchored>
+				<parameters>
+					<defaultlabelres>record_disease_cycler_track_latent</defaultlabelres>
+					<labelsres>record_disease_cycler_track_weakened|record_disease_cycler_track_impared|record_disease_cycler_track_befuddled</labelsres>
+					<values>1|2|3|4</values>
+				</parameters>
+			</button_stringcycler>
+						
+			
+			<!--END NEW-->
+			
 			<label_column name="save_label">
 				<static textres="record_disease_save_label" />
 			</label_column>
@@ -126,7 +177,7 @@
 			</number_column_right>
 			<label name="savedc_label">
 				<anchored height="20">
-					<top parent="subtype" anchor="bottom" offset="7" />
+					<top parent="track_type" anchor="bottom" offset="7" />
 					<right parent="savedc" anchor="left" offset="-8" />
 				</anchored>
 				<static textres="dc" />
@@ -134,7 +185,7 @@
 			
 			<button_stringcycler name="savetype">
 				<anchored width="50">
-					<top parent="subtype" anchor="bottom" offset="7" />
+					<top parent="track_type" anchor="bottom" offset="7" />
 					<right parent="savedc_label" anchor="left" offset="-8" />
 				</anchored>
 				<parameters>

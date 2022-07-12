@@ -13,6 +13,7 @@
 	<string name="record_disease_section_stats_label">STATS</string>
 	<string name="record_disease_type_label">Type</string>
 	<string name="record_disease_subtype_label">Subtype</string>
+	<string name="record_disease_track_label">Track</string>
 	<string name="record_disease_save_label">Save</string>
 	<string name="record_disease_onset_label">Onset</string>
 	<string name="record_disease_freq_label">Frequency</string>
@@ -23,6 +24,26 @@
 	<string name="record_disease_poison_effect_secondary_label">Secondary</string>
 	<string name="record_disease_section_description_label">DESCRIPTION</string>
 	<string name="record_disease_associated_npc_name_label">Associated NPC</string>
+	
+	<string name="record_disease_cycler_track_type_none">-</string>
+	<string name="record_disease_cycler_track_type_physical">physical</string>
+	<string name="record_disease_cycler_track_type_mental">mental</string>
+	<string name="record_disease_cycler_track_type_strenght">strength</string>
+	<string name="record_disease_cycler_track_type_dexterity">dexterity</string>
+	<string name="record_disease_cycler_track_type_constitution">constitution</string>
+	<string name="record_disease_cycler_track_type_intelligence">intelligence</string>
+	<string name="record_disease_cycler_track_type_wisdom">wisdom</string>
+	<string name="record_disease_cycler_track_type_charisma">charisma</string>
+	
+	<string name="record_disease_cycler_track_latent">latent</string>
+	<string name="record_disease_cycler_track_weakened">weakened</string>
+	<string name="record_disease_cycler_track_impared">impared</string>
+	<string name="record_disease_cycler_track_debilitated">debilitated</string>
+	<string name="record_disease_cycler_track_befuddled">befuddled</string>
+	<string name="record_disease_cycler_track_bedridden">bedridden</string>
+	<string name="record_disease_cycler_track_disassociated">disassociated</string>
+	<string name="record_disease_cycler_track_comatose">comatose</string>
+	<string name="record_disease_cycler_track_dead">dead</string>
 	
 	<string name="record_disease_cycler_freq_none">-</string>
 	<string name="record_disease_cycler_freq_round">/rd</string>
